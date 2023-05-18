@@ -11,6 +11,7 @@ int main(int argc, char* argv[])
 		const ProgramOptions program_options = ProcessingParams(argc, argv);
 		std::string file_path = program_options.file_path;
 		std::string start_address = program_options.start_address;
+		std::string end_address = program_options.end_address;
 
 		if (!boost::filesystem::exists(file_path))
 		{
@@ -25,7 +26,12 @@ int main(int argc, char* argv[])
 		else
 		{
 			uint64_t hex_start_address = std::stoull(start_address, nullptr, 16);
-			std::vector<uint8_t> b_code = GetBinaryData(file_path);
+			uint64_t hex_end_address = std::stoull(end_address, nullptr, 16);
+			uint64_t rva = hex_start_address - 0x00400000;
+			std::cout << "size: " << std::hex << hex_end_address - hex_start_address << std::endl;
+
+			std::vector<uint8_t> b_code = GetPEData((char*)file_path.data(), rva, hex_end_address - hex_start_address);
+			// std::vector<uint8_t> b_code = GetBinaryData(file_path);
 			//std::vector<uint8_t> b_code = GetBinaryData("D:\\Code_Files\\Clean_Juck_Code\\data.txt");
 			//std::vector<uint8_t> b_code = GetBinaryData("D:\\Code_Files\\Clean_Juck_Code\\b_code.txt");
 			//#define b_code "\x8d\x4c\x32\x08\x01\xd8\x81\xc6\x34\x12\x00\x00"

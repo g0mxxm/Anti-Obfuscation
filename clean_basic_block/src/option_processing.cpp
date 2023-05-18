@@ -8,10 +8,11 @@ ProgramOptions ProcessingParams(int argc, char* argv[])
 	my_options.add_options()
 		("help,h", "produce help message")
 		("file_path,f", value<std::string>(), "set the file path of the code file")
-		("start_address,a", value<std::string>(), "set the start address of the code");
+		("start_address,a", value<std::string>(), "set the start address of the code")
+		("end_address,e", value<std::string>(), "set the end address of the code");
 
 	variables_map options_map;
-	store(parse_command_line(argc, argv, my_options), options_map);
+	store(command_line_parser(argc, argv).options(my_options).run(), options_map);
 	notify(options_map);
 	
 
@@ -27,9 +28,13 @@ ProgramOptions ProcessingParams(int argc, char* argv[])
 		{
 			program_options.file_path = options_map["file_path"].as<std::string>();
 		}
-		if (options_map.count("file_path"))
+		if (options_map.count("start_address"))
 		{
 			program_options.start_address = options_map["start_address"].as<std::string>();
+		}
+		if (options_map.count("end_address"))
+		{
+			program_options.end_address = options_map["end_address"].as<std::string>();
 		}
 		if (options_map.count("help"))
 		{

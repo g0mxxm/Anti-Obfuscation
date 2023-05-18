@@ -11,13 +11,14 @@ using namespace boost::filesystem;
 
 enum DataSourceType
 {
-	ORACLE,			//oracleÀàÐÍµÄÊý¾Ý¿â
-	SQLSERVER		//sqlserverÀàÐÍµÄÊý¾Ý¿â
+	ORACLE,			//oracleï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
+	SQLSERVER		//sqlserverï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
 };
 struct ProgramOptions
 {
 	std::string file_path;
 	std::string start_address;
+	std::string end_address;
 };
 
 ProgramOptions ProcessingParams(int argc, char* argv[]);
