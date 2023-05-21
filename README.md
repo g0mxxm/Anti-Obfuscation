@@ -10,12 +10,12 @@ You need clone this repo, the source code in the "clean_basic_block\src", the li
 ## Realse
 You also can download the realse file to use this project.
 # Usage
-![README-2023-05-21-19-12-28](https://g0mx-picbed.oss-cn-beijing.aliyuncs.com/blogs/pictures/README-2023-05-21-19-12-28.png)
+![README-2023-05-21-19-12-28](https://g0mx-picbed.oss-cn-beijing.aliyuncs.com/blogs/pictures/README-2023-05-21-19-12-28.png)  
 This tools have four optinos: 
-- "-h" 为显示帮助信息  
-- "-f" 为包含待分析基本块的机器码文件，该选项为必选项  
-- "-s" 为第一条指令的起始地址(RVA)，该选项为必选项
-- "-e" 为基本块的结束地址，该选项为必选项
+- "-h" Displays help information.
+- "-f" set the path of "exe" file you want to clean.  
+- "-s" set the start address(RVA) of basic block.
+- "-e" set the end address(RVA) of basic block.
 # Example
 This basic block has been obfuscated:  
 ```x86asm
