@@ -13,9 +13,9 @@ You also can download the realse file to use this project.
 ![README-2023-05-21-19-12-28](https://g0mx-picbed.oss-cn-beijing.aliyuncs.com/blogs/pictures/README-2023-05-21-19-12-28.png)  
 This tools have four optinos: 
 - "-h" Displays help information.
-- "-f" set the path of "exe" file you want to clean.  
-- "-s" set the start address(RVA) of basic block.
-- "-e" set the end address(RVA) of basic block.
+- "-f" Set the path of "exe" file you want to clean.  
+- "-s" Set the start address(RVA) of basic block.
+- "-e" Set the end address(RVA) of basic block.
 # Example
 This basic block has been obfuscated:  
 ```x86asm
