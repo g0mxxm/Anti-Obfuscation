@@ -1,5 +1,5 @@
 # Introduction
-The tool can be used to eliminate redundant instructions in a basic block, thus making the reverse analysis work simple and easy to carry out. The core ideas used are stain analysis and active variable analysis!  
+The tool can be used to eliminate redundant instructions in a basic block, thus making the reverse analysis work simple and easy to carry out. The core ideas used are stain analysis and active variable analysis! If you want to know more details about this project, you can read this [airtical](https://bbs.kanxue.com/thread-277825.htm) is pulished on the "KanXue" forum.  
 # Install 
 ## Environment
 - Language: C++
