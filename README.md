@@ -1,3 +1,5 @@
+# Preface
+The idea of this project comes from the open source community, and I will also feed back the results to the open source community. I hope everyone can gain something, and I would like to thank those generous colleagues who are committed to open source technology, and hope that we can make this world a better place.
 # Introduction
 The tool can be used to eliminate redundant instructions in a basic block, thus making the reverse analysis work simple and easy to carry out. The core ideas used are stain analysis and active variable analysis! If you want to know more details about this project, you can read this [airtical](https://bbs.kanxue.com/thread-277825.htm) is pulished on the "KanXue" forum.  
 # Install 
